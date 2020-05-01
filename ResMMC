@@ -1,0 +1,26 @@
+
+package mmc;
+
+public class ResMMC {
+    public int resp(int a,int b){
+        int soma=2,res=1;
+        if(a == 0 && a == 0){
+            return 1;
+        }
+        while(a+b > 2){
+            if(a%soma != 0 && b%soma !=0){
+                soma++;
+            } 
+            if(a%soma == 0 || b%soma == 0){
+                if(a%soma == 0){
+                    a = a / soma;
+                }
+                if(b%soma == 0){
+                    b = b / soma;
+                }
+                res = res * soma;
+            }
+        }
+        return res;
+    }
+}
